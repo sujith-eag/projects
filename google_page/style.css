@@ -1,0 +1,102 @@
+
+
+.main{
+    margin-top: 100px;
+    }
+
+.logo {
+    display: block;
+    width: 300px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.search_box {
+    display: block;
+
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    height: 24px;
+    padding-top: 10px;
+    padding-bottom: 10x;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    border: 1px solid #dfe1e5;
+    border-radius: 24px;
+    }
+
+
+.btn_wrapper{
+    display: flex;
+    justify-content: center;
+
+}
+
+.btn{
+  /* since flexbox is used above, 
+  i removed the margin left/right:auto
+  and also the display: block */
+
+    margin-top: 30px;
+
+    background: #dfe1e5;
+    
+    /*border-width: 0px;   does the same*/
+    border: none;
+    border-radius: 8px;
+
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+
+    font-size: 14px;
+    font-weight: lighter;
+
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+.privacy_line{
+    margin-top: 50px;
+    text-align: center;
+}
+
+
+
+h1, p {
+    margin-top: 50px;
+    text-align: center;
+}
+
+
+
+
+.the_button {  /* just an experiment */
+    border: 1px solid #cfd9de;
+    border-color: #cfd9de;
+    border-radius: 18px;
+
+    font-weight: bold;
+    color: #0f1419;
+
+    background-color: white;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 12px;
+    padding-right: 12px;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    margin-top: 30px;
+
+}
+
