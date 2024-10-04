@@ -23,22 +23,23 @@ h2 {
     padding: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     margin: auto;
-    max-width: 400px;
-    display: flex; /* Use flexbox for layout */
-    align-items: center; /* Center items vertically */
+    max-width: 600px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
 .inputDiv label {
     font-size: 1.1em;
     margin-right: 10px;
-    flex-shrink: 0; /* Prevent label from shrinking */
+    flex-shrink: 0;
 }
 
 input[type="text"] {
     padding: 10px;
     border: 2px solid #d9534f;
     border-radius: 4px;
-    flex-grow: 1; /* Allow input to grow and take available space */
+    flex-grow: 1;
     font-size: 1em;
 }
 
@@ -76,5 +77,16 @@ h2.winOrLoseString {
 }
 
 .buttonDiv {
+    padding-top: 15px;
+    padding-bottom: 15px;
     margin-top: 20px;
+    background-color: #fff;
+
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    max-width: 450px;
+    margin: auto;
+    margin-top: 25px;
 }

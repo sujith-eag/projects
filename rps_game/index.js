@@ -61,13 +61,14 @@ function computerChoise(hC){
 function winLoseDraw(hC, cC){
     
     let resultString = ""
-    let winStatus = false;
+    let winStatus = null;
 
     if (hC==="rock") {
         if (cC === "rock"){
            resultString = "Both Chose Rock!! Play again.";
         } else if(cC === "paper"){
             resultString = "Paper covers Rock, You lost.";
+            winStatus = false;
         } else {
             resultString = "Rock Breaks Scissor, You Won.";
             winStatus = true;
@@ -78,22 +79,29 @@ function winLoseDraw(hC, cC){
             resultString = "Both Chose Paper!! Play again.";
          } else if(cC === "scissor"){
              resultString = "Scissor cuts Paper, You lost.";
+             winStatus = false;
          } else {
              resultString = "Paper covers Rock, You Won.";
              winStatus = true;
          }
-    } else {
+    } else if (hC === "scissor") {
         if (cC === "scissor"){
             resultString = "Both Chose Scissor!! Play again.";
          } else if(cC === "rock"){
              resultString = "Rock breaks Scissor, You lost.";
+             winStatus = false;
          } else {
              resultString = "Scissor cuts Paper, You Won.";
              winStatus = true;
             }
     }
+
     winOrLoseString.textContent = resultString;
-    updateCounter(winStatus);
+
+    if (winStatus!= null) {
+        updateCounter(winStatus);
+    }
+    
     
 }
 
@@ -102,13 +110,12 @@ function updateCounter(winStatus){
 
     if (winStatus === true) {
         player += 1;
-        pScore.textContent = `Player Score:  ${player}`;
-        cScore.textContent = `Computer Score: ${computer}`;        
-    } else {
+    } else if (winStatus === false) {
         computer += 1;
-        cScore.textContent = `Computer Score: ${computer}`;
-        pScore.textContent = `Player Score:  ${player}`;
     }
+
+    cScore.textContent = `Computer Score: ${computer}`;
+    pScore.textContent = `Player Score:  ${player}`;
     
     checkEnd();
 }

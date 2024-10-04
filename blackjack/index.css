@@ -1,4 +1,4 @@
-body {
+/* body {
     text-align: center;
     background-color: green;
     padding: 0;
@@ -38,4 +38,78 @@ button {
 .resetButton {
     background-color: red;
     padding: 5px 20px 5px 20px;
+} */
+
+
+
+body {
+    text-align: center;
+    background-color: #004d00;
+    padding: 0;
+    margin: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+}
+
+h1 {
+    margin-top: 60px;
+    font-size: 50px;
+    color: goldenrod;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Shadow for depth */
+}
+
+.welResult {
+    font-size: 24px; /* Increase font size for results */
+    margin: 20px 0;
+    color: lightyellow;
+    transition: color 0.3s; /* Smooth transition on hover */
+}
+
+.welResult:hover {
+    color: goldenrod; /* Change color on hover */
+}
+
+.resultString {
+    font-style: italic;
+    font-size: 20px; /* Adjust font size */
+}
+
+.btnSet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+button {
+    padding: 10px 40px; /* Increased padding for better touch targets */
+    background-color: lightyellow;
+    font-weight: bolder;
+    font-size: 18px; /* Slightly larger font size */
+    color: goldenrod;
+    border-radius: 8px; /* More rounded corners */
+    border: none;
+    cursor: pointer; /* Pointer on hover */
+    transition: background-color 0.3s, transform 0.2s; /* Transition effects */
+}
+
+button:hover {
+    background-color: #ffeb3b; /* Lighter yellow on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+.resetButton {
+    background-color: red;
+    padding: 8px 30px; /* Adjust padding */
+    font-size: 18px; /* Consistent font size */
+    border-radius: 8px; /* Match button styling */
+}
+
+.resetButton:hover {
+    background-color: darkred; /* Darker red on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+.prizeReset {
+    margin-top: 30px; /* Add spacing above */
 }
