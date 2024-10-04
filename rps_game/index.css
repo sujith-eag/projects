@@ -1,0 +1,80 @@
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+    margin: 0;
+}
+
+h1 {
+    color: #d9534f;
+}
+
+h2 {
+    margin: 10px 0;
+    font-size: 1.5em;
+}
+
+.inputDiv {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: auto;
+    max-width: 400px;
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+}
+
+.inputDiv label {
+    font-size: 1.1em;
+    margin-right: 10px;
+    flex-shrink: 0; /* Prevent label from shrinking */
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: 2px solid #d9534f;
+    border-radius: 4px;
+    flex-grow: 1; /* Allow input to grow and take available space */
+    font-size: 1em;
+}
+
+button {
+    padding: 10px 15px;
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    background-color: #d9534f;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #c9302c;
+}
+
+h3.pScore, h3.cScore {
+    font-weight: bold;
+    font-size: 1.4em; 
+    color: #d9534f;
+}
+
+h2.compChoise {
+    margin: 20px 0;
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+h2.winOrLoseString {
+    margin: 20px 0;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.buttonDiv {
+    margin-top: 20px;
+}
