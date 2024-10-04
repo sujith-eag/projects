@@ -1,0 +1,51 @@
+
+.container{
+    text-align: center;
+    }
+
+.heading {
+    color: red;
+}
+
+.inputDiv {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.inputDiv #inputBox {
+    font-size: medium;
+    font-weight: bold;
+
+    padding: 2px 10px 5px 15px;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.inputDiv .addButton {
+    margin-top: 7px;
+    font-size: larger;
+    font-weight: bold;
+    color: white;
+    background-color: teal;
+    border: none;
+    padding: 5px 10px;
+}
+
+ul {
+    margin-top: 40px;
+}
+li {
+    text-align: right;
+    list-style: none;
+    margin-right: 300px;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.delButton {
+    margin-left: 15px;
+    background-color: royalblue;
+    font-size: small;
+    color: white;
+    padding: 2px 4px;
+}
