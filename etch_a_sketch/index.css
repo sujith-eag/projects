@@ -1,0 +1,22 @@
+
+#container {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 16cm;
+    justify-content: center;
+    gap: 1px;
+}
+
+.pixel {
+    width: 5px;
+    height: 5px;
+    background-color: lightgray;
+    border: 1px solid #ccc;
+}
+
+.pixel:hover {
+    background-color: darkgray;
+}
+
