@@ -11,33 +11,67 @@ container.appendChild(heading);
 
 
 // Input box and Button
-
 const inputBox = document.querySelector("#inputBox");
 const addButton = document.querySelector(".addButton");
 const listEl = document.querySelector(".listEl");
+
+
+while(true){  // Code to run on start, using prompt
+    let pItem = prompt("Enter items","");
+    
+    if(!pItem){
+        break }
+    makeListItem(pItem);
+    }
 
 addButton.addEventListener("click", () => {
     let entry = inputBox.value.trim();
 
     if (entry !== "") {
-        // Create new list item
-        const listItem = document.createElement("li");
-        listItem.innerHTML = `${entry} <button class="delButton">delete</button>`;
+        // add new item by function        
+        makeListItem(entry);
 
-        // Append the new list item to the list
-        listEl.appendChild(listItem);
-        
         // Clear the input box
         inputBox.value = "";
-
-        // Add event listener for delete button
-        const delButton = listItem.querySelector(".delButton");
-        // listItem used instead of document reference
-        delButton.addEventListener("click", () => {
-            listEl.removeChild(listItem);
-            });
         }
     });
+
+// also using Enter to trigger the add button
+inputBox.addEventListener("keypress", (some) => {
+    if (some.key === "Enter") {
+        addButton.click();
+    }
+});
+
+
+function makeListItem(input){
+    // create a new list item
+    let listItem = document.createElement('li');
+    // add input data and button tag with class
+    listItem.innerHTML = `${input} <button class="delButton">delete</button>`;
+    // append to list
+    listEl.append(listItem);
+
+    // select delete button WITHIN Current ListItem, not document
+    // putting it on documnet deletes all entries
+    let delButton = listItem.querySelector('.delButton');
+    // add removing function on click
+    delButton.addEventListener( 'click', ()=> {
+        listEl.removeChild(listItem);
+    })
+}
+
+// A button to clear the list
+const clearButton = document.querySelector('.clearButton');
+
+clearButton.addEventListener('click', ()=> {
+    while(listEl.firstChild){
+        listEl.firstChild.remove();
+    }
+});
+
+
+
 
 /* 
 Using appendChild for List Items: Instead of manipulating innerHTML, 
@@ -50,22 +84,13 @@ event of the add button. This way, each delete button can refer
 to its corresponding list item.
 */
 
-// also using Enter to trigger the add button
-inputBox.addEventListener("keypress", (some) => {
-    if (some.key === "Enter") {
-        addButton.click();
-    }
-});
 
 /* event listener is keypress, function needs a name and using
 the if statement to identiy if key was Enter and trigger button
 by using click() */
 
 
-
-
 /*
-
 // didnt work because i added all html and appended it,
 instead of adding li first and appending html to it
 
