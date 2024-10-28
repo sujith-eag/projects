@@ -3,18 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects</title>
+    <title>Projects Display Site</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Practice Projects</h1>
-
-    <p>The projects here were done to practice the topics learnt based on various resources</p>
-    <div><a href="./google_page/index.html">Google page</a></div>
-    <div><a href="./personal_site/index.html">Personal Card</a></div>
-    <div><a href="./simple_counter/index.html">A Counter App</a></div>
-    <div><a href="./shopping_list/index.html">Basic Shopping List</a></div>
-    <div><a href="./rps_game/index.html">Rock Paper Scissor Game</a></div>
-    <div><a href="./blackjack/index.html">Black Jack Card Game</a></div>
+    <div class="heading">
+        <h1>My Practice Projects</h1>
+    </div>
+    <div class="site-description">
+        <p>Welcome to my project showcase! This is a collection of projects that I've implemented as part of my learning journey. Each project growing with my growing skills in development, utilizing HTML, CSS, and JavaScript to create interactive and functional applications. Feel free to explore each project!</p>
+    </div>
     
+    <div class="projects-block">
+        
+        <div class="individual-project">
+            <a href="https://sujith-eag.github.io/personal-site/">
+                <h2>Sujith's Library Website</h2>
+                <p class="project-description">A Personal Library Site to hold the notes and resources collected during the learning journey. Regularly updated as learning continues. Static site made using HUGO and deployed on GitHub Pages.</p>
+            </a>
+        </div>
+        
+        <div class="individual-project">
+            <a href="./blackjack/index.html">
+                <h2>Black Jack Card Game</h2>
+                <p class="project-description">A replayable Black-Jack game implemented with JavaScript and DOM manipulation.</p>
+            </a>
+        </div>
+        <div class="individual-project">
+            <a href="./rps_game/index.html">
+                <h2>Rock Paper Scissor Game</h2>
+                <p class="project-description">A Rock-Paper-Scissor game with random generation, featuring a best-of-three result and reset functionality.</p>
+            </a>
+        </div>
+        <div class="individual-project">
+            <a href="./shopping_list/index.html">
+                <h2>Basic Shopping List</h2>
+                <p class="project-description">Create and manage a shopping list with entry prompts and deletion options using JavaScript and DOM manipulation.</p>
+            </a>
+        </div>
+        <div class="individual-project">
+            <a href="./simple_counter/index.html">
+                <h2>A Counter App</h2>
+                <p class="project-description">An app to count passenger entries for trips, featuring total calculations with event listeners.</p>
+            </a>
+        </div>
+        <div class="individual-project">
+            <a href="./google_page/index.html">
+                <h2>Google Page</h2>
+                <p class="project-description">A simple Google front page created with HTML and CSS, showcasing Flexbox for layout alignment.</p>
+            </a>
+        </div>
+        <div class="individual-project">
+            <a href="./personal_site/index.html">
+                <h2>Personal Card</h2>
+                <p class="project-description">A basic profile page serving as a personal card.</p>
+            </a>
+        </div>
+    </div>
+    <!-- <script>
+    document.querySelectorAll('a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            target.scrollIntoView({
+                behavior: 'smooth'
+                });
+            });
+        });
+    </script> -->
 </body>
 </html>
