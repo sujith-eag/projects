@@ -4,7 +4,6 @@ body, h1, p {
     padding: 0;
 }
 
-/* body styles */
 body {
     font-family: 'Arial', sans-serif;
     background-color: #eef2f3; /* Light gray background */
@@ -12,7 +11,6 @@ body {
     line-height: 1.6;
 }
 
-/* Heading styles */
 .heading {
     text-align: center;
     padding: 20px 0;
@@ -20,7 +18,11 @@ body {
     color: white;
 }
 
-/* Site description styles */
+.entry {
+    font-size: large;
+    font-weight: bold;
+    
+}
 .site-description {
     max-width: 800px;
     margin: 20px auto;
@@ -31,14 +33,12 @@ body {
     font-size: 1.1em;
 }
 
-/* Project block styles */
 .projects-block {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
 }
 
-/* Individual project styles */
 .individual-project {
     background-color: white;
     border: 1px solid #ddd;
@@ -51,9 +51,10 @@ body {
 
 .individual-project:hover {
     transform: scale(1.02);
+    background: linear-gradient(to right, #b3e9e6, rgb(112, 142, 248) );
+
 }
 
-/* Link styles */
 a {
     text-decoration: none;
     color: #2980b9; /* Blue link color */
@@ -64,14 +65,12 @@ a:hover {
     text-decoration: none;
 }
 
-/* Project description styles */
 .project-description {
     margin-top: 10px;
     font-size: 0.9em;
     color: #555;
 }
 
-/* Responsive adjustments */
 @media (max-width: 600px) {
     .projects-block {
         padding: 10px;

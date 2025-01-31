@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form 1</title>
+    <style>
+        table, tr, td {
+            border-collapse: collapse;
+            padding: 2px 1px 2px 1px;
+        }
+            
+        .form_container{
+            display: block;
+            border: 1px solid sandybrown;
+            background-color: azure;
+            padding: 5px;
+            width: 600px;
+            margin: auto;
+        }
+        fieldset{
+            display: block;
+            padding: 3px 30px 3px 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form_container">
+        <h2 style="text-align: center;">Payments Page</h2>    
+    <form action="form_2.html">
+        <fieldset>
+            <legend>Your details</legend>
+            <table>
+                <tr>
+                    <td>
+                        <p>1.</p>
+                    </td>
+                    <td>
+                        <label>Name </label>
+                        <input type="text" placeholder="First and last name">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>2.</p>
+                    </td>
+                    <td>
+                        <label>Email </label>
+                        <input type="text" placeholder="example@domain.com">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>3.</p>
+                    </td>
+                    <td>
+                        <label>Phone </label>
+                        <input type="text" placeholder="Eg: +4475000000">
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Delivery address</legend>
+            <table>
+                <tr>
+                    <td>
+                        <p>1.</p>
+                    </td>
+                    <td>
+                        <label for="add">Address <textarea id="add" rows="3" cols="23"></textarea></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>2. </p>
+                    </td>
+                    <td>
+                        <label>Post code </label><input type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>3. </p>
+                    </td>
+                    <td>
+                        <label for="con">Country </label><input id="con" type="text">
+                    </td>
+                </tr>
+            </table>    
+        </fieldset>
+        
+        <fieldset>
+            <legend>Card details</legend>
+        <table>
+            <tr>
+                <td>
+                    <p>1. </p>
+                </td>
+                <td>
+                    <fieldset>
+                        <legend>Card type</legend>
+                        <label for="visa">1. <input type="radio" value="Visa" id="visa" name="card">VISA</label><br>
+                        <label for="amex">2. <input type="radio" value="AmEx" id="amex" name="card">AmEx</label><br>
+                        <label for="mc">3. <input type="radio" value="Mastercard" id="mc" name="card">Mastercard</label>
+                    </fieldset>   
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>2. </p>
+                </td>
+                <td>
+                    <label>Card number <input type="number"></label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    3.
+                </td>
+                <td>
+                    <label for="sc">Security Code <input id="sc" type="number"></label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>4. </p>
+                </td>
+                <td>
+                    <label for="noc">Name on card <input id="noc" type="text" placeholder="Exact name as on the card"></label>
+                </td>
+            </tr>
+        </table>
+        </fieldset>
+        
+        <fieldset>
+            <input type="submit" value="Buy it!">
+        </fieldset>
+    </form>
+        
+    </div>
+</body>
+</html>

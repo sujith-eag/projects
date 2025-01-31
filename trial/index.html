@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form with Fieldset, Legend, and Table Alignment</title>
+  <style>
+    table {
+      width: 100%;
+      margin-top: 10px;
+    }
+    td {
+      padding: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <form>
+    <fieldset>
+      <legend>Personal Information</legend>
+      
+      <label for="name">Name: </label><br>
+      <input type="text" id="name" name="name"><br><br>
+      
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email"><br><br>
+      
+    </fieldset>
+
+    <fieldset>
+      <legend>Favorite Fruits</legend>
+
+      <table>
+        <tr>
+            <td><label for="apple">Apple</label></td>
+            <td><input type="radio" id="apple" name="fruit" value="Apple"></td>
+          
+        </tr>
+        <tr>
+          <td><input type="radio" id="orange" name="fruit" value="Orange"></td>
+          <td><label for="orange">Orange</label></td>
+        </tr>
+        <tr>
+          <td><input type="radio" id="banana" name="fruit" value="Banana"></td>
+          <td><label for="banana">Banana</label></td>
+        </tr>
+      </table>
+      
+    </fieldset>
+
+    <fieldset>
+      <legend>Vehicle Preferences</legend>
+
+      <table>
+        <tr>
+          <td><input type="checkbox" id="car" name="vehicle" value="Car"></td>
+          <td><label for="car">Car</label></td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" id="bike" name="vehicle" value="Bike"></td>
+          <td><label for="bike">Bike</label></td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" id="bus" name="vehicle" value="Bus"></td>
+          <td><label for="bus">Bus</label></td>
+        </tr>
+      </table>
+      
+    </fieldset>
+
+    <br>
+    <input type="submit" value="Submit">
+  </form>
+
+</body>
+</html>

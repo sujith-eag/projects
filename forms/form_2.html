@@ -1,0 +1,205 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, hsl(0, 19%, 79%), hsl(42, 58%, 60%));
+            margin: 0;
+            padding: 20px;
+        }
+        .form_container {
+            max-width: 600px;
+            margin: auto;
+            background: linear-gradient(135deg, hsl(269, 59%, 56%) 0%, hsl(218, 70%, 64%) 100%);
+            border-radius: 8px; 
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #ffffff;
+            font-size: 32px;
+            font-stretch: expanded;
+            margin-bottom: 20px;
+        }
+        fieldset {
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        legend {
+            font-size: 18px;
+            color: #2c3e50;
+            font-weight: bold;
+        }
+        table {
+            width: 100%;
+            margin-top: 8px;
+        }
+
+        label {
+            font-weight: 500;
+            color: #ffffff;
+            margin-bottom: 6px;
+        }
+        input[type="text"], input[type="number"], textarea {
+            width: 75%;
+            padding: 8px;
+            margin: 6px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        input[type="text"]:focus, input[type="number"]:focus, textarea:focus {
+            transition: 0.3s;
+            background-color: aquamarine;
+            color: chocolate;
+            font-weight: bold;
+        }
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+        .radio-group label {
+            display: inline-block;
+            margin-right: 20px;
+        }
+        input[type="submit"] {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 8px 25px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        input[type="submit"]:hover {
+            background-color: #2980b9;
+            padding: 13px 32px;
+        }
+        textarea {
+            font-size: 14px;
+            resize: vertical;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form_container">
+        <h2>Payments Page</h2>
+        <form action="form_3.html">
+            <fieldset>
+                <legend>Your Details</legend>
+                <table>
+                    <tr>
+                        <td>1.</td>
+                        <td>
+                            <label for="name">Name</label>
+                            <input type="text" id="name" placeholder="First and last name">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2.</td>
+                        <td>
+                            <label for="email">Email</label>
+                            <input type="text" id="email" placeholder="example@domain.com">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3.</td>
+                        <td>
+                            <label for="phone">Phone</label>
+                            <input type="text" id="phone" placeholder="Eg: +4475000000">
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+
+            <fieldset>
+                <legend>Delivery Address</legend>
+                <table>
+                    <tr>
+                        <td>1.</td>
+                        <td>
+                            <label for="address">Address  </label>
+                            <textarea id="address" rows="3" placeholder="Street address, city, etc."></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2.</td>
+                        <td>
+                            <label for="postcode">Post Code</label>
+                            <input type="text" id="postcode">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3.</td>
+                        <td>
+                            <label for="country">Country   </label>
+                            <input type="text" id="country">
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+            
+
+            <fieldset>
+                <legend>Card Details</legend>
+                <table>
+                    <tr>
+                        <td>1.</td>
+                        <td>
+                            <fieldset>
+                                <legend>Card Type</legend>
+                                <div class="radio-group">
+                                    <label for="visa">
+                                        <input type="radio" id="visa" name="card" value="Visa"> VISA
+                                    </label>
+                                    <label for="amex">
+                                        <input type="radio" id="amex" name="card" value="AmEx"> AmEx
+                                    </label>
+                                    <label for="mastercard">
+                                        <input type="radio" id="mastercard" name="card" value="Mastercard"> Mastercard
+                                    </label>
+                                </div>
+                            </fieldset>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2.</td>
+                        <td>
+                            <label for="cardNumber">Card Number</label>
+                            <input type="number" id="cardNumber">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3.</td>
+                        <td>
+                            <label for="securityCode">Security Code</label>
+                            <input type="number" id="securityCode">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>4.</td>
+                        <td>
+                            <label for="cardName">Name on Card</label>
+                            <input type="text" id="cardName" placeholder="Exact name as on the card">
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+
+            <fieldset>
+                <a><input type="submit" value="Buy it!"></a>
+            </fieldset>
+        </form>
+    </div>
+
+</body>
+</html>
