@@ -6,7 +6,7 @@ body, h1, p {
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #eef2f3; /* Light gray background */
+    background-color: #eef2f3;
     color: #333;
     line-height: 1.6;
 }
@@ -14,12 +14,12 @@ body {
 .heading {
     text-align: center;
     padding: 20px 0;
-    background-color: #2c3e50; /* Dark blue-gray */
+    background-color: #2c3e50;
     color: white;
 }
 
 .entry {
-    font-size: large;
+    font-size: 20px;
     font-weight: bold;
     
 }
@@ -46,7 +46,7 @@ body {
     padding: 15px;
     margin-bottom: 15px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
+    transition: transform 0.3s;
 }
 
 .individual-project:hover {
@@ -57,7 +57,7 @@ body {
 
 a {
     text-decoration: none;
-    color: #2980b9; /* Blue link color */
+    color: #2980b9;
     font-weight: bold;
 }
 
