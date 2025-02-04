@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IoT-based Animal Health Monitoring System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1, h2, h3, h4 {
+            color: #333;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>IoT-based Animal Health Monitoring System using <strong>Machine Learning</strong> to Detect Illness Based on Motion and Behavior Data</h1>
+
+    <hr>
+
+    <div class="section">
+        <h2>Basic Flow of Program Events</h2>
+
+        <ul>
+            <li><strong>Animal ID Assignment:</strong> (Before or as part of the data entry) Assigning a unique identifier (ID) to each animal to track its data consistently.</li>
+            <li><strong>Data Validation:</strong> Ensure that the input data is validated (e.g., age, breed, and other vital characteristics) to prevent incorrect or incomplete entries.</li>
+            <li><strong>Health History Input:</strong> Allowing for manual input of any previous illnesses or medical history that may assist in anomaly detection.</li>
+            <li><strong>Behavioral and Health Baseline:</strong> Defining initial behaviors and health conditions for each animal (e.g., resting heart rate, eating habits) that will be useful for comparison when abnormalities are detected.</li>
+        </ul>
+
+        <h3><strong>Tracker</strong></h3>
+        <ul>
+            <li><strong>Tracker Configuration and Calibration:</strong> Ensure each tracker is calibrated to the animal’s unique physiological needs (size, activity level).</li>
+            <li><strong>Fault Detection:</strong> Monitor tracker performance for issues like low battery or signal loss to ensure data integrity.</li>
+        </ul>
+
+        <h3><strong>Wifi / Network Provider</strong></h3>
+        <ul>
+            <li>Tracker (accelerometer, gyroscope, network related)</li>
+            <li>Real-time data of positional changes in space, for a specific tracker</li>
+            <li>Needed: Connecting with network and data passing, Networking protocols, Traffic handling</li>
+            <li>Wifi / Network provider: Passing the Un-processed raw data from unique trackers</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h4><strong>Backend</strong></h4>
+        <ul>
+            <li>Received raw data stored in a structured manner for each unique ID.</li>
+            <li>Raw Data translated into behavioral patterns and individual movements / Unique for each type and ID based on predefined quantifiers/logic in real-time.</li>
+            <li>Processed data of translated action/motion coupled with unique ID of animal.</li>
+            <li>Stored in a structural manner with time frame reference.</li>
+            <li>Summary consolidated for daily data and stored separately for access.</li>
+        </ul>
+
+        <h4><strong>ML Processing</strong></h4>
+        <ul>
+            <li>ML model trained on analyzing different sets of raw data and predicting the action or event for a particular animal.</li>
+            <li>Creating a standard healthy base model of each animal with previous data on each regularly.</li>
+            <li>Updating the pre-defined characteristics that change with time accurately.</li>
+            <li>Considering and comparing the new raw data with standard base to predict the change in behavior accurately.</li>
+            <li>Tuning the model output to consider all possibilities and external events for correctness.</li>
+            <li>Tuning the model to accurately predict the action from raw data coupled with pre-defined data.</li>
+            <li>Model training on the movement characteristics of an unwell animal to be matched with incoming raw data.</li>
+            <li>The processing database updated in real-time for each animal, setting the specific parameters on which the comparison is done before sending alert/report.</li>
+            <li>Being able to access the correctness of the report through feedback.</li>
+        </ul>
+
+        <p>A database of final processed data on movements and reports accessible through API calls.</p>
+    </div>
+
+    <div class="section">
+        <h4><strong>Pre Backend Server</strong></h4>
+        <ul>
+            <li>Able to handle authentication.</li>
+            <li>Managing Cookies for sessions and setting session timeouts.</li>
+            <li>Interpreting the API calls to get the recent individual data or generating general average data on a particular ID as needed by UI.</li>
+            <li>Passing the data in a structured format (XML or JSON) to be interpreted by the Frontend.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h4><strong>Front End</strong></h4>
+        <ul>
+            <li>Authentication space.</li>
+            <li>Entry section for inputs and updating a tracker (switch).</li>
+            <li>Section for managing the number of trackers and updating or adding/removing.</li>
+            <li>Display section for time interval display of stats.</li>
+            <li>Alert section for ID with reports that need attention and a way to provide feedback on accuracy or actual status of report (assisted learning and model updating).</li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <div class="section">
+        <h2>Expanded Version</h2>
+
+        <h3><strong>Behavioral Pre-Set of Data</strong></h3>
+        <ul>
+            <li><strong>Age, Gender, Breed-Specific Attributes:</strong> Tracking these factors to detect early illness indicators specific to certain demographics.</li>
+            <li><strong>External Stressors:</strong> Include data on environmental stressors (temperature, noise, weather, food/water changes) that could influence behavior.</li>
+        </ul>
+
+        <h3><strong>Animal Input & Profile</strong></h3>
+        <ul>
+            <li><strong>Animal ID Assignment:</strong> Each animal is given a unique identifier (ID) to track its data.</li>
+            <li><strong>Data Validation:</strong> Validating input data (e.g., age, breed, and other key details) to avoid errors.</li>
+            <li><strong>Health History Input:</strong> Including any previous illnesses or medical history can help with anomaly detection later.</li>
+            <li><strong>Behavioral and Health Baseline:</strong> Setting initial behaviors and health conditions (e.g., resting heart rate, eating habits) will be useful for later comparisons when abnormalities are detected.</li>
+        </ul>
+
+        <h3><strong>Tracker</strong></h3>
+        <ul>
+            <li><strong>Tracker Configuration and Calibration:</strong> Calibrate each tracker (accelerometer, gyroscope, network related) to meet the animal’s needs (size, activity level).</li>
+            <li><strong>Fault Detection:</strong> Monitor tracker performance for issues like low battery or signal loss.</li>
+            <li>Environmental or Elemental Tolerance, Ruggedness</li>
+            <li>Repairable / Maintainable</li>
+        </ul>
+
+        <h3><strong>Wifi / Network Provider</strong></h3>
+        <ul>
+            <li><strong>Data Encryption & Security:</strong> Ensuring data is transmitted securely with encryption to protect privacy.</li>
+            <li>Traffic Handling through Protocols.</li>
+            <li><strong>Network Health Check:</strong> Regular checks on network connection help avoid data loss in real-time.</li>
+        </ul>
+
+        <h3><strong>Backend</strong></h3>
+        <ul>
+            <li><strong>Raw Data Storage:</strong> Raw data is received and stored in a structured manner for each unique ID.</li>
+            <li><strong>Data Translation:</strong> Raw data is translated into behavioral patterns and individual movements. Translation is unique for each type and ID based on predefined quantifiers and logic in real-time.</li>
+            <li><strong>Processed Data:</strong> Translated actions/motions are processed and coupled with the unique ID of the animal.</li>
+            <li><strong>Data Storage:</strong> Processed data is stored in a structured manner with time-frame references.</li>
+            <li><strong>Data Summary:</strong> A summary is consolidated for daily data and stored separately for easy access.</li>
+        </ul>
+
+        <h3><strong>ML Processing</strong></h3>
+        <ul>
+            <li><strong>Feature Engineering:</strong> Extracting meaningful features from raw data (e.g., acceleration patterns, angular velocity) to improve the model's accuracy.</li>
+            <li><strong>Behavior Classification:</strong> Classifying raw data into different behavioral types (e.g., active, resting, feeding, stressed).</li>
+            <li><strong>Anomaly Detection:</strong> Algorithms to detect unusual patterns that may indicate illness or distress.</li>
+            <li><strong>Continuous Learning:</strong> Continuously feeding new data to the model to improve accuracy, with options for manual correction of labels.</li>
+            <li><strong>Threshold Setting:</strong> Set thresholds for alerts based on historical data and animal type.</li>
+            <li><strong>Alert Generation:</strong> Alerts are triggered when unusual patterns are detected by the model.</li>
+        </ul>
+
+        <h3><strong>Database</strong></h3>
+        <ul>
+            <li><strong>Data Archiving:</strong> Periodically archive data for long-term analysis to detect rare patterns.</li>
+            <li><strong>Backup System:</strong> Implement redundant backups to avoid losing valuable data.</li>
+            <li><strong>Structured Data Format (JSON/XML):</strong> Ensure data is structured and easily retrievable via API.</li>
+        </ul>
+
+        <h3><strong>Pre-Backend Server</strong></h3>
+        <ul>
+            <li><strong>Rate Limiting and API Throttling:</strong> Preventing system overload by limiting API calls.</li>
+            <li><strong>Caching:</strong> Use caching strategies for frequently requested data to reduce load and improve response times.</li>
+            <li><strong>Load Balancing:</strong> For scalability, distribute incoming traffic across multiple servers.</li>
+        </ul>
+
+        <h3><strong>Front-End</strong></h3>
+        <ul>
+            <li><strong>User Roles & Permissions:</strong> Create roles (admin, vet, user, etc.) with varying levels of data access.</li>
+            <li><strong>Real-Time Data Visualization:</strong> Display movement patterns, heart rate, and acceleration in easy-to-read graphs.</li>
+            <li><strong>Alert Management System:</strong> Providing reports and graphs for detected behavior anomalies or health alerts.</li>
+            <li><strong>User Feedback System:</strong> Allow users to validate or deny reports, providing feedback to improve accuracy.</li>
+            <li><strong>Health Trends Dashboard:</strong> Show long-term trends like movement over weeks or months to help detect potential health issues.</li>
+            <li><strong>Data Export Feature:</strong> Let users download reports or data for further analysis.</li>
+        </ul>
+
+        <h3><strong>Additional Components & Steps</strong></h3>
+        <ul>
+            <li><strong>Testing & Validation:</strong> Run controlled tests to validate the system’s functionality and stress-test for scalability.</li>
+            <li><strong>Integration with External Medical Systems:</strong> Integrate with veterinary software for a more comprehensive health view, potentially exporting alerts automatically.</li>
+            <li><strong>Behavioral Context Awareness:</strong> Consider factors like weather, time of day, or group behavior, which may affect activity and improve detection accuracy.</li>
+        </ul>
+
+        <h3><strong>Final Outcome: Illness Detection</strong></h3>
+        <ul>
+            <li><strong>Real-Time Alerts to Caretakers or Veterinarians:</strong> Send alerts to authorized personnel when potential health issues are detected.</li>
+            <li><strong>Report Generation:</strong> Generate a summary report including movement data, anomaly detection results, and suggested actions.</li>
+            <li><strong>Data Analytics for Disease Prediction:</strong> Over time, the system can predict the likelihood of certain illnesses based on detected patterns.</li>
+        </ul>
+    </div>
+
+</body>
+</html>
