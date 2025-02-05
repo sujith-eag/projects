@@ -12,10 +12,18 @@
             padding: 0;
         }
         header {
-            background-color: #333;
-            color: #fff;
+            background-color: #004d4d;
+            color: white;
             padding: 20px;
             text-align: center;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        h2 {
+            font-size: 1.2em;
+            margin: 10px 0;
         }
         .container {
             display: flex;
@@ -26,8 +34,8 @@
         }
         .card {
             background-color: #fff;
-            width: 250px;
-            height: 300px;
+            width: 280px;
+            height: 350px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             overflow: hidden;
@@ -46,6 +54,11 @@
             font-size: 1.5em;
             color: #333;
         }
+        .card h4 {
+            font-size: 1em;
+            color: #666;
+            margin-bottom: 10px;
+        }
         .card p {
             font-size: 1em;
             color: #666;
@@ -56,21 +69,32 @@
             object-fit: cover;
             border-radius: 5px;
         }
+        footer {
+            background-color: #004d4d;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .highlight {
+            font-weight: bold;
+            color: #006666;
+        }
     </style>
 </head>
 <body>
 
 <header>
     <h1>Research and Exploration on Project</h1>
-    <p>Each Page Contains Summary on the workflow, tech stack requirements, previous requirements and Machine learning process</p>
-    <p>(Not yet Fully formatted so Some repetition)</p>
+    <h2>Each page contains summaries of the workflow, tech stack requirements, previous technologies, and machine learning processes</h2>
 </header>
 
 <div class="container">
     <a href="PrFiSt_1.html" class="card">
-
         <h3>Basic Flow of Program</h3>
-        <h4>IoT-based Animal Health Monitoring System using <strong>Machine Learning</strong> to Detect Illness Based on Motion and Behavior Data</h4>
+        <h4>IoT-based Animal Health Monitoring System using <span class="highlight">Machine Learning</span> to Detect Illness Based on Motion and Behavior Data</h4>
         <p></p>
     </a>
 
@@ -80,8 +104,7 @@
     </a>
 
     <a href="PrFiSt_2.html" class="card">
-        <h3>Reasearch and Previous Technologies</h3>
-        
+        <h3>Research and Previous Technologies</h3>
         <p>Livestock Health Monitoring Systems and Related Technologies</p>
     </a>
 
@@ -90,6 +113,10 @@
         <p>Illness Detection in Animals Using Motion Sensor Data and Machine Learning</p>
     </a>
 </div>
+
+<footer>
+
+</footer>
 
 </body>
 </html>

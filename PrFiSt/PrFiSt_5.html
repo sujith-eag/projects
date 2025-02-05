@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IoT-Based Animal Health Monitoring System with ML for Illness Detection</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>IoT-Based Animal Health Monitoring System with Machine Learning for Illness Detection</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -14,31 +15,54 @@
             color: #333;
         }
         header {
-            background: #333;
-            color: #fff;
+            background-color: #004d4d;
+            color: white;
             padding: 10px 0;
             text-align: center;
+        }
+        h1, h2, h3 {
+            margin: 0 0 10px 0;
+        }
+        h2 {
+            font-size: 1.6em;
+            margin-top: 20px;
+        }
+        h3 {
+            font-size: 1.4em;
+            color: #006666;
         }
         section {
             padding: 20px;
             margin: 20px;
-            background-color: #fff;
+            background-color: white;
             border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-        h1, h2 {
-            color: #333;
         }
         ul {
-            margin-left: 20px;
+            list-style-type: none;
+            padding-left: 20px;
         }
         li {
-            margin: 10px 0;
+            margin-bottom: 10px;
+        }
+        li:before {
+            content: "• ";
+            color: #004d4d;
+        }
+        footer {
+            background-color: #004d4d;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
         }
         .tech-stack {
-            background-color: #f2f2f2;
-            padding: 10px;
-            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .highlight {
+            font-weight: bold;
+            color: #006666;
         }
     </style>
 </head>
@@ -46,218 +70,206 @@
 
 <header>
     <h1>IoT-Based Animal Health Monitoring System with Machine Learning for Illness Detection</h1>
-    <p>Comprehensive breakdown of the project workflow, detailing the technical stack and additional requirements for each phase, assuming a <strong>12-18 months</strong> development cycle for a fully functional system.</p>
+    <p>Comprehensive Breakdown of the Project Workflow</p>
 </header>
 
-<section>
-    <h2>1. Planning and Requirement Gathering (1-2 months)</h2>
-    <strong>Goal:</strong> Define the scope, requirements, and user needs for the system.
-
-    <ul>
-        <li>Stakeholder meetings (veterinarians, farmers, animal health experts) to gather user needs.</li>
-        <li>Define <strong>key features</strong>: IoT sensor integration, ML-based predictions, user alerts.</li>
-        <li>Research IoT devices (e.g., motion sensors like accelerometers, gyroscopes, GPS trackers) and communication protocols (e.g., Bluetooth, Zigbee, Wi-Fi).</li>
-        <li>Research ML algorithms (classification models, anomaly detection).</li>
-        <li>Design system architecture for scalability, data privacy, and security.</li>
-        <li>Estimate the system's load (number of sensors and animals supported).</li>
-        <li>Determine required <strong>data storage</strong> (cloud or on-premise) and integration with other animal health systems.</li>
-        <li>Security: <strong>Data encryption</strong>, <strong>access control</strong>, <strong>compliance</strong> with privacy regulations (e.g., GDPR, HIPAA).</li>
-    </ul>
-
-    <div class="tech-stack">
-        <h3>Tech Stack:</h3>
+<div class="content">
+    <section class="section">
+        <h2>1. Planning and Requirement Gathering (1-2 months)</h2>
+        <p><strong>Goal:</strong> Define the scope, requirements, and user needs for the system.</p>
         <ul>
-            <li><strong>Data Security:</strong> TLS/SSL encryption, OAuth for authentication, GDPR compliance.</li>
-            <li><strong>Tools:</strong> Microsoft Teams/Slack for communication, Confluence for documentation, Google Docs for collaborative requirements gathering.</li>
+            <li>Stakeholder meetings (veterinarians, farmers, animal health experts) to gather user needs.</li>
+            <li>Define key features: IoT sensor integration, ML-based predictions, user alerts.</li>
+            <li>Research IoT devices (e.g., motion sensors like accelerometers, gyroscopes, GPS trackers) and communication protocols (e.g., Bluetooth, Zigbee, Wi-Fi).</li>
+            <li>Research ML algorithms (classification models, anomaly detection).</li>
+            <li>Design system architecture for scalability, data privacy, and security.</li>
+            <li>Estimate system's load (number of sensors and animals supported).</li>
+            <li>Determine required data storage (cloud or on-premise) and integration with other animal health systems.</li>
+            <li>Security: Data encryption, access control, compliance with privacy regulations (e.g., GDPR, HIPAA).</li>
         </ul>
-    </div>
-</section>
+        <div class="tech-stack">
+            <h3>Tech Stack:</h3>
+            <ul>
+                <li>Data Security: <span class="highlight">TLS/SSL encryption, OAuth for authentication, GDPR compliance</span></li>
+                <li>Tools: Microsoft Teams/Slack, Confluence, Google Docs for collaboration.</li>
+            </ul>
+        </div>
+    </section>
 
-<section>
-    <h2>2. System Design and Prototyping (2-3 months)</h2>
-    <strong>Goal:</strong> Create a system design and prototype to visualize and test core components.
-
-    <ul>
-        <li>Design <strong>system architecture</strong> (backend, frontend, IoT devices, data storage).</li>
-        <li>Prototype IoT hardware: Select and test motion sensors (accelerometers, gyroscopes), communication modules (Wi-Fi, Bluetooth).</li>
-        <li>Design UI/UX for mobile/web app, using wireframes and mockups.</li>
-        <li>Develop initial IoT data pipeline: Data flow, sensor data collection, real-time transmission.</li>
-        <li>Set up <strong>cloud architecture</strong> (AWS, Google Cloud, Azure) for data storage and processing.</li>
-    </ul>
-
-    <div class="tech-stack">
-        <h3>Tech Stack:</h3>
+    <section class="section">
+        <h2>2. System Design and Prototyping (2-3 months)</h2>
+        <p><strong>Goal:</strong> Create a system design and prototype to visualize and test core components.</p>
         <ul>
-            <li><strong>Frontend UI/UX Design Tools:</strong> Figma, Sketch, Adobe XD.</li>
-            <li><strong>Backend Architecture Tools:</strong> AWS Architecture Diagram Tool, Lucidchart.</li>
-            <li><strong>Prototyping Tools:</strong> InVision, Balsamiq.</li>
-            <li><strong>IoT Hardware Selection:</strong> Arduino, Raspberry Pi, ESP32, Nordic Semiconductor Bluetooth modules.</li>
-            <li><strong>Cloud Platform:</strong> AWS, Google Cloud, Azure for hosting services and data storage.</li>
-            <li><strong>Mobile App Framework:</strong> React Native or Flutter for cross-platform development.</li>
+            <li>Design system architecture (backend, frontend, IoT devices, data storage).</li>
+            <li>Prototype IoT hardware: Select and test motion sensors (accelerometers, gyroscopes), communication modules (Wi-Fi, Bluetooth).</li>
+            <li>Design UI/UX for mobile/web app, using wireframes and mockups.</li>
+            <li>Develop initial IoT data pipeline: Data flow, sensor data collection, real-time transmission.</li>
+            <li>Set up cloud architecture (AWS, Google Cloud, Azure) for data storage and processing.</li>
         </ul>
-    </div>
-</section>
+        <div class="tech-stack">
+            <h3>Tech Stack:</h3>
+            <ul>
+                <li>Frontend UI/UX Design Tools: <span class="highlight">Figma, Sketch, Adobe XD</span></li>
+                <li>Backend Architecture Tools: <span class="highlight">AWS Architecture Diagram Tool, Lucidchart</span></li>
+                <li>IoT Hardware Selection: <span class="highlight">Arduino, Raspberry Pi, ESP32</span></li>
+                <li>Cloud Platform: <span class="highlight">AWS, Google Cloud, Azure</span></li>
+                <li>Mobile App Framework: <span class="highlight">React Native, Flutter</span></li>
+            </ul>
+        </div>
+    </section>
 
-<section>
-    <h2>3. IoT Device and Hardware Integration (2-3 months)</h2>
-    <strong>Goal:</strong> Build and test the IoT hardware integration with the system.
-
-    <ul>
-        <li>Integrate IoT sensors (accelerometers, gyroscopes, GPS) with the backend system.</li>
-        <li>Develop <strong>sensor firmware</strong> for data collection and communication with cloud infrastructure.</li>
-        <li>Ensure <strong>real-time data transmission</strong> via Bluetooth, Wi-Fi, or Zigbee.</li>
-        <li>Perform <strong>sensor calibration</strong> and establish a <strong>data collection protocol</strong> for accurate measurements.</li>
-        <li>Implement <strong>battery monitoring</strong>, power-saving modes, and <strong>device health management</strong>.</li>
-    </ul>
-
-    <div class="tech-stack">
-        <h3>Tech Stack:</h3>
+    <section class="section">
+        <h2>3. IoT Device and Hardware Integration (2-3 months)</h2>
+        <p><strong>Goal:</strong> Build and test the IoT hardware integration with the system.</p>
         <ul>
-            <li><strong>Firmware Development:</strong> Arduino IDE, PlatformIO for embedded systems programming.</li>
-            <li><strong>Communication Protocols:</strong> MQTT, CoAP for IoT data transmission.</li>
-            <li><strong>Cloud Communication:</strong> AWS IoT Core, Google IoT Core.</li>
-            <li><strong>Protocols for Sensor Data Transmission:</strong> Wi-Fi (ESP32), Bluetooth Low Energy (BLE), Zigbee.</li>
-            <li><strong>Sensor Calibration Tools:</strong> MATLAB, LabVIEW.</li>
+            <li>Integrate IoT sensors (accelerometers, gyroscopes, GPS) with the backend system.</li>
+            <li>Develop sensor firmware for data collection and communication with cloud infrastructure.</li>
+            <li>Ensure real-time data transmission via Bluetooth, Wi-Fi, or Zigbee.</li>
+            <li>Perform sensor calibration and establish a data collection protocol for accurate measurements.</li>
+            <li>Implement battery monitoring, power-saving modes, and device health management.</li>
         </ul>
-    </div>
-</section>
+        <div class="tech-stack">
+            <h3>Tech Stack:</h3>
+            <ul>
+                <li>Firmware Development: <span class="highlight">Arduino IDE, PlatformIO</span></li>
+                <li>Communication Protocols: <span class="highlight">MQTT, CoAP</span></li>
+                <li>Cloud Communication: <span class="highlight">AWS IoT Core, Google IoT Core</span></li>
+                <li>Protocols for Sensor Data Transmission: <span class="highlight">Wi-Fi, BLE, Zigbee</span></li>
+                <li>Sensor Calibration Tools: <span class="highlight">MATLAB, LabVIEW</span></li>
+            </ul>
+        </div>
+    </section>
 
-<section>
-    <h2>4. Backend Development and Data Processing (2-3 months)</h2>
-    <strong>Goal:</strong> Build the backend to store, process, and manage the IoT data.
-
-    <ul>
-        <li>Develop server-side infrastructure to manage data from IoT devices (e.g., Node.js, Flask, Django).</li>
-        <li>Set up <strong>database</strong> for storing sensor data and animal profiles (e.g., PostgreSQL, MongoDB).</li>
-        <li>Implement <strong>APIs</strong> to retrieve health data, ML predictions, and generate reports.</li>
-        <li><strong>Data pipeline development:</strong> Ingest, clean, and structure real-time sensor data.</li>
-        <li>Implement <strong>time-series processing</strong> to handle sensor data.</li>
-        <li>Set up <strong>data storage solutions</strong> ensuring <strong>privacy and security</strong>.</li>
-    </ul>
-
-    <div class="tech-stack">
-        <h3>Tech Stack:</h3>
+    <section class="section">
+        <h2>4. Backend Development and Data Processing (2-3 months)</h2>
+        <p><strong>Goal:</strong> Build the backend to store, process, and manage the IoT data.</p>
         <ul>
-            <li><strong>Backend Frameworks:</strong> Node.js, Flask, Django (for Python-based environments).</li>
-            <li><strong>Database:</strong> PostgreSQL, MongoDB, TimescaleDB (for time-series data).</li>
-            <li><strong>API Design & Implementation:</strong> RESTful APIs (Node.js, Flask), GraphQL.</li>
-            <li><strong>Data Pipeline:</strong> Apache Kafka, Apache Spark for real-time data processing.</li>
-            <li><strong>Cloud Storage Solutions:</strong> Amazon S3, Google Cloud Storage.</li>
-            <li><strong>Data Security Tools:</strong> AWS KMS (Key Management Service), Google Cloud IAM (Identity & Access Management).</li>
+            <li>Develop server-side infrastructure to manage data from IoT devices.</li>
+            <li>Set up database for storing sensor data and animal profiles (e.g., PostgreSQL, MongoDB).</li>
+            <li>Implement APIs to retrieve health data, ML predictions, and generate reports.</li>
+            <li>Data pipeline development: Ingest, clean, and structure real-time sensor data.</li>
+            <li>Implement time-series processing to handle sensor data.</li>
+            <li>Set up data storage solutions ensuring privacy and security.</li>
         </ul>
-    </div>
-</section>
+        <div class="tech-stack">
+            <h3>Tech Stack:</h3>
+            <ul>
+                <li>Backend Frameworks: <span class="highlight">Node.js, Flask, Django</span></li>
+                <li>Database: <span class="highlight">PostgreSQL, MongoDB, TimescaleDB</span></li>
+                <li>API Design & Implementation: <span class="highlight">RESTful APIs, GraphQL</span></li>
+                <li>Data Pipeline: <span class="highlight">Apache Kafka, Apache Spark</span></li>
+                <li>Cloud Storage Solutions: <span class="highlight">Amazon S3, Google Cloud Storage</span></li>
+                <li>Data Security Tools: <span class="highlight">AWS KMS, Google Cloud IAM</span></li>
+            </ul>
+        </div>
+    </section>
 
-<section>
-    <h2>5. Machine Learning Model Development (3-4 months)</h2>
-    <strong>Goal:</strong> Develop and train the machine learning model to analyze motion data and detect illnesses.
-
-    <ul>
-        <li>Gather and <strong>label data</strong> (e.g., motion data for healthy and sick animals).</li>
-        <li>Preprocess data (time-series normalization, feature extraction).</li>
-        <li>Select and implement ML algorithms (e.g., Random Forest, SVM, LSTM).</li>
-        <li><strong>Train the model</strong> on historical and real-time data, fine-tune parameters for accuracy.</li>
-        <li>Perform <strong>model validation</strong> and cross-validation to avoid overfitting.</li>
-        <li>Implement <strong>model monitoring</strong> to track performance over time.</li>
-        <li>Develop <strong>feedback loops</strong> to continuously retrain the model with new data.</li>
-    </ul>
-
-    <div class="tech-stack">
-        <h3>Tech Stack:</h3>
+    <section class="section">
+        <h2>5. Machine Learning Model Development (3-4 months)</h2>
+        <p><strong>Goal:</strong> Develop and train the machine learning model to analyze motion data and detect illnesses.</p>
         <ul>
-            <li><strong>Machine Learning Frameworks:</strong> TensorFlow, Keras, Scikit-learn, PyTorch.</li>
-            <li><strong>Data Processing Libraries:</strong> Pandas, NumPy.</li>
-            <li><strong>Model Training:</strong> Google Colab, Jupyter Notebook for model experimentation.</li>
-            <li><strong>Model Deployment:</strong> TensorFlow Serving, AWS SageMaker, Google AI Platform.</li>
+            <li>Gather and label data (e.g., motion data for healthy and sick animals).</li>
+            <li>Preprocess data (time-series normalization, feature extraction).</li>
+            <li>Select and implement ML algorithms (e.g., Random Forest, SVM, LSTM).</li>
+            <li>Train the model on historical and real-time data, fine-tune parameters for accuracy.</li>
+            <li>Perform model validation and cross-validation to avoid overfitting.</li>
+            <li>Implement model monitoring to track performance over time.</li>
+            <li>Develop feedback loops to continuously retrain the model with new data.</li>
         </ul>
-    </div>
-</section>
+        <div class="tech-stack">
+            <h3>Tech Stack:</h3>
+            <ul>
+                <li>Machine Learning Frameworks: <span class="highlight">TensorFlow, Keras, Scikit-learn, PyTorch</span></li>
+                <li>Data Processing Libraries: <span class="highlight">Pandas, NumPy</span></li>
+                <li>Model Training: <span class="highlight">Google Colab, Jupyter Notebook</span></li>
+                <li>Model Deployment: <span class="highlight">TensorFlow Serving, AWS SageMaker</span></li>
+            </ul>
+        </div>
+    </section>
 
-<section>
-    <h2>6. Front-End Development and User Interface (2-3 months)</h2>
-    <strong>Goal:</strong> Build the user interface for users to interact with the system.
-
-    <ul>
-        <li>Design <strong>UI/UX</strong> based on wireframes and user feedback.</li>
-        <li>Implement <strong>data visualization</strong> for motion patterns and health trends (e.g., using graphs, charts).</li>
-        <li><strong>Develop real-time alerts</strong> for system notifications (e.g., abnormal movement or illness).</li>
-        <li>Implement <strong>authentication</strong> and <strong>user profiles</strong> for animal tracking.</li>
-        <li>Integrate <strong>backend APIs</strong> for retrieving data and machine learning predictions.</li>
-    </ul>
-
-    <div class="tech-stack">
-        <h3>Tech Stack:</h3>
+    <section class="section">
+        <h2>6. Front-End Development and User Interface (2-3 months)</h2>
+        <p><strong>Goal:</strong> Build the user interface for users to interact with the system.</p>
         <ul>
-            <li><strong>Web Frontend:</strong> React.js, Angular, Vue.js.</li>
-            <li><strong>Mobile App Framework:</strong> React Native, Flutter.</li>
-            <li><strong>Real-time Data Visualization:</strong> D3.js, Chart.js.</li>
-            <li><strong>Notifications and Alerts:</strong> Firebase Cloud Messaging (FCM), Twilio for SMS.</li>
-            <li><strong>User Authentication:</strong> Firebase Auth, Auth0, JWT (JSON Web Token).</li>
-            <li><strong>UI/UX Tools:</strong> Figma, Sketch, Adobe XD.</li>
+            <li>Design UI/UX based on wireframes and user feedback.</li>
+            <li>Implement data visualization for motion patterns and health trends (e.g., using graphs, charts).</li>
+            <li>Develop real-time alerts for system notifications (e.g., abnormal movement or illness).</li>
+            <li>Implement authentication and user profiles for animal tracking.</li>
+            <li>Integrate backend APIs for retrieving data and machine learning predictions.</li>
         </ul>
-    </div>
-</section>
+        <div class="tech-stack">
+            <h3>Tech Stack:</h3>
+            <ul>
+                <li>Web Frontend: <span class="highlight">React.js, Angular, Vue.js</span></li>
+                <li>Mobile App Framework: <span class="highlight">React Native, Flutter</span></li>
+                <li>Real-time Data Visualization: <span class="highlight">D3.js, Chart.js</span></li>
+                <li>Notifications and Alerts: <span class="highlight">Firebase Cloud Messaging (FCM), Twilio</span></li>
+                <li>User Authentication: <span class="highlight">Firebase Auth, Auth0, JWT</span></li>
+            </ul>
+        </div>
+    </section>
 
-<section>
-    <h2>7. Integration Testing and QA (2 months)</h2>
-    <strong>Goal:</strong> Test the system as a whole and ensure it works reliably across all components.
-
-    <ul>
-        <li><strong>Unit testing</strong> for each component (backend, frontend, IoT).</li>
-        <li>Perform <strong>integration testing</strong> to check data flow between IoT devices, backend, and frontend.</li>
-        <li>Conduct <strong>load testing</strong> to simulate real-world traffic and identify performance bottlenecks.</li>
-        <li>Gather <strong>user acceptance feedback</strong> for improvements.</li>
-    </ul>
-
-    <div class="tech-stack">
-        <h3>Tech Stack:</h3>
+    <section class="section">
+        <h2>7. Integration Testing and QA (2 months)</h2>
+        <p><strong>Goal:</strong> Test the system as a whole and ensure it works reliably across all components.</p>
         <ul>
-            <li><strong>Testing Frameworks:</strong> Mocha, Jest, Cypress (for frontend), Pytest (for backend).</li>
-            <li><strong>Load Testing:</strong> Apache JMeter, LoadRunner.</li>
-            <li><strong>Continuous Integration Tools:</strong> Jenkins, GitLab CI/CD.</li>
+            <li>Unit testing for each component (backend, frontend, IoT).</li>
+            <li>Perform integration testing to check data flow between IoT devices, backend, and frontend.</li>
+            <li>Conduct load testing to simulate real-world traffic and identify performance bottlenecks.</li>
+            <li>Gather user acceptance feedback for improvements.</li>
         </ul>
-    </div>
-</section>
+        <div class="tech-stack">
+            <h3>Tech Stack:</h3>
+            <ul>
+                <li>Testing Frameworks: <span class="highlight">Mocha, Jest, Cypress</span></li>
+                <li>Load Testing Tools: <span class="highlight">Apache JMeter, Gatling</span></li>
+                <li>Monitoring Tools: <span class="highlight">Prometheus, Grafana</span></li>
+            </ul>
+        </div>
+    </section>
 
-<section>
-    <h2>8. Deployment and Monitoring (1-2 months)</h2>
-    <strong>Goal:</strong> Deploy the system in a live environment and continuously monitor its performance.
-
-    <ul>
-        <li>Deploy system on production servers (AWS EC2, Google Cloud Compute).</li>
-        <li>Ensure real-time monitoring of device health, ML predictions, and alerts.</li>
-        <li>Set up <strong>logging</strong> and <strong>error tracking</strong> (e.g., Sentry, ELK stack).</li>
-        <li>Implement <strong>automated scaling</strong> to handle changes in traffic and data volume.</li>
-    </ul>
-
-    <div class="tech-stack">
-        <h3>Tech Stack:</h3>
+    <section class="section">
+        <h2>8. Deployment and Launch (1-2 months)</h2>
+        <p><strong>Goal:</strong> Deploy the product into production and ensure smooth operation.</p>
         <ul>
-            <li><strong>Deployment:</strong> AWS EC2, Google Cloud Compute Engine, Docker.</li>
-            <li><strong>Monitoring:</strong> Prometheus, Grafana, New Relic.</li>
-            <li><strong>Logging:</strong> ELK Stack (Elasticsearch, Logstash, Kibana), Sentry for error tracking.</li>
+            <li>Set up the production environment and ensure scalability.</li>
+            <li>Deploy backend services (APIs, models, database) on cloud platforms (AWS, GCP, Azure).</li>
+            <li>Deploy frontend applications (mobile apps, web interfaces).</li>
+            <li>Conduct soft launch to gather feedback.</li>
+            <li>Plan for official launch after fixing identified issues.</li>
         </ul>
-    </div>
-</section>
+        <div class="tech-stack">
+            <h3>Tech Stack:</h3>
+            <ul>
+                <li>Cloud Platforms: <span class="highlight">AWS, GCP, Microsoft Azure</span></li>
+                <li>CI/CD Tools: <span class="highlight">Jenkins, GitLab CI, CircleCI</span></li>
+                <li>Containerized Deployment: <span class="highlight">Docker, Kubernetes</span></li>
+            </ul>
+        </div>
+    </section>
 
-<section>
-    <h2>9. Post-Deployment Maintenance and Updates (Ongoing)</h2>
-    <strong>Goal:</strong> Continuously maintain the system, fix bugs, and update features.
-
-    <ul>
-        <li>Provide regular <strong>software updates</strong> for bug fixes and new features.</li>
-        <li>Monitor <strong>IoT device performance</strong> and optimize battery life and connectivity.</li>
-        <li>Collect user feedback for system improvements and new functionality.</li>
-    </ul>
-
-    <div class="tech-stack">
-        <h3>Tech Stack:</h3>
+    <section class="section">
+        <h2>9. Post-Launch Monitoring and Maintenance (Ongoing)</h2>
+        <p><strong>Goal:</strong> Ensure the system remains operational and continues to improve.</p>
         <ul>
-            <li><strong>Monitoring Tools:</strong> Datadog, Prometheus.</li>
-            <li><strong>Bug Tracking:</strong> Jira, GitHub Issues.</li>
+            <li>Monitor system performance (user activity, ML model performance).</li>
+            <li>Collect user feedback to improve the system.</li>
+            <li>Plan for updates and new features (e.g., adding new sensors, improving ML models).</li>
+            <li>Retrain the ML model with new data.</li>
         </ul>
-    </div>
-</section>
+        <div class="tech-stack">
+            <h3>Tech Stack:</h3>
+            <ul>
+                <li>Monitoring & Logging: <span class="highlight">ELK Stack, Datadog, Splunk</span></li>
+                <li>Model Retraining Frameworks: <span class="highlight">TensorFlow, Scikit-learn</span></li>
+            </ul>
+        </div>
+    </section>
+
+</div>
+
+<footer>
+</footer>
 
 </body>
 </html>
