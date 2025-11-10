@@ -31,5 +31,33 @@ pipeline {
                 echo "Deploying..."
             }
         }
+        
+        stage('Build and Run Java') {
+            steps {
+                echo "--- Compiling Java ---"
+                // This command compiles DemoJava.java into DemoJava.class
+                sh 'javac DemoJava.java'
+                
+                echo "--- Running Java ---"
+                // This command runs the compiled class
+                sh 'java DemoJava'
+            }
+        }
+        
+        stage('Run Python') {
+            steps {
+                echo "--- Running Python ---"
+                // This command runs the Python script
+                // We use 'python3' to be specific
+                sh 'python3 demo_python.py'
+            }
+        }
+        
+    }
+    post {
+        // This 'always' block runs regardless of whether the stages passed or failed
+        always {
+            echo "Pipeline has finished."
+        }
     }
 }
