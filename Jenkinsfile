@@ -3,7 +3,7 @@ pipeline {
     agent any
 
     tools {
-        jdk 'java17'
+        jdk 'java21'
     }
     stages {
         // Jenkins automatically checks out source code
